@@ -6,14 +6,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
     $(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
-
+      $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+          $('li a').addClass('shrink');
+        } else {
+          $('li a').removeClass('shrink');
+        }
+      });
+      // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-    //  $(this).css(color:black;background-color:white;text-decoration:none;)
-      // Prevent default anchor click behavior
-      event.preventDefault();
       // Store hash
       var hash = this.hash;
 
@@ -35,10 +38,11 @@
     <header class="nav">
 
             <ul class="container-fluid">
+              <li class="pull-left no-attrib"><a href="#nav1">A Template Website</a></li>
               <span class="navig">
                 <li><a href="#nav1">Home</a></li>
                 <li><a href="#nav2">About</a></li>
-                <li><a href="#nav3">Contact</a></li>
+                <li class="padd"><a href="#nav3">Contact</a></li>
               </span>
             </ul>
 
@@ -46,6 +50,7 @@
 
     <section id="main">
         <article class="article backimg1" id="nav1">
+          <br />
             <p>Big Tech Ideas Page3</p>
         </article>
 

@@ -41,6 +41,7 @@ ul{
 }
 span.navig{
   float:right;
+  padding-left: 30px;
 }
 li{
   float:left;
@@ -48,11 +49,20 @@ li{
 
 li a{
     display:block;
+    font-size: 16px;
     background-color: #333;
-    padding:14px 16px;
+    padding:35px 16px;
     color:white;
     text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 
+}
+li.padd{
+  padding-right:100px;
+}
+li a.shrink{
+  padding: 14px 16px;
 }
 
 li a:hover{
@@ -64,6 +74,15 @@ li a:hover{
     -ms-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+}
+li.no-attrib a:hover{
+  background-color:black;
+  color:white;
+  text-decoration:none;
+}
+li.no-attrib a.shrink{
+  padding: 14px 20px;
+  font-size:20px;
 }
 li a:active, li a:target, li a::after, li a::before{
   background-color:white;
